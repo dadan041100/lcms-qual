@@ -1,4 +1,3 @@
-// tests/register.duplicate.spec.ts
 import { test, expect } from '@playwright/test';
 import dotenv from 'dotenv';
 dotenv.config();
@@ -78,7 +77,7 @@ test.describe('Duplicate Account Registration', () => {
       const el = page.locator(sel);
       if ((await el.count()) > 0 && (await el.first().isVisible())) {
         const message = await el.first().innerText().catch(() => '');
-        console.log('⚠️ Duplicate registration error detected:', message);
+        console.log('Duplicate registration error detected:', message);
         errorFound = true;
         break;
       }

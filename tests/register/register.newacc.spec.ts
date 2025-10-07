@@ -1,4 +1,3 @@
-// tests/register.newacc.spec.ts
 import { test, expect } from '@playwright/test';
 import dotenv from 'dotenv';
 dotenv.config();
@@ -37,7 +36,7 @@ test.describe('New Account Registration', () => {
     await page.fill(emailSel, testEmail);
     await page.fill(passSel, testPassword);
 
-    // ✅ Corrected submit logic: try multiple selectors separately
+    // Corrected submit logic: try multiple selectors separately
     const submitSelectors = [
       'button[type="submit"]',
       'input[type="submit"]',
@@ -60,7 +59,7 @@ test.describe('New Account Registration', () => {
 
     if (!clicked) throw new Error('Could not find the Create Account button on the page.');
 
-    // ✅ Check for success
+    // Check for success
     const successSelectors = [
       'text=Registration successful',
       'text=Account created',
@@ -81,7 +80,7 @@ test.describe('New Account Registration', () => {
 
     //Assert success
     if (page.url() !== REGISTER_URL || successFound) {
-      console.log(`✅ Successfully registered user: ${testEmail}`);
+      console.log(`Successfully registered user: ${testEmail}`);
     } else {
       throw new Error('Registration did not redirect or show a success message.');
     }
