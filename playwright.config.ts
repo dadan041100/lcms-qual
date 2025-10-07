@@ -7,7 +7,6 @@ export default defineConfig({
     baseURL: process.env.BASE_URL,
   },
 
-  // Optional: show traces and screenshots on failure
   reporter: [['list'], ['html', { open: 'never' }]],
   retries: 0,
 
@@ -16,11 +15,11 @@ export default defineConfig({
       name: 'Microsoft Edge',
       use: {
         browserName: 'chromium',
-        headless: false, // 👈 show the browser window
-        channel: 'msedge', // Use the Chrome browser channel
+        headless: false, 
+        channel: 'msedge', 
         viewport: null,
         launchOptions: {
-          slowMo: 100, // slows down actions so you can see them
+          slowMo: 100, 
           args: ['--start-maximized'],
         },
       },
