@@ -37,7 +37,5 @@ You can specify which browser with `--project=[browsername]`.
 Example:
 
 ```bash
-npx playwright test tests/wasims-qual/register.spec.ts --headed --project=chromium
+npx playwright test tests/lcms-qual/register.spec.ts --headed --project=chromium
 ```
-
-Only run `auth.setup.spec.ts` once to save login state for local device
