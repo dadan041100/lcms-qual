@@ -24,4 +24,4 @@ storageState.json
 *.swo
 *~
 
-.github
+.github/workflows
