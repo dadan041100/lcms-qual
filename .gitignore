@@ -23,3 +23,5 @@ storageState.json
 *.swp
 *.swo
 *~
+
+.github
